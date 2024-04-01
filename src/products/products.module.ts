@@ -8,7 +8,8 @@ import { PRODUCT_SERVICE, envs } from 'src/config';
   providers: [],
   imports: [
     ClientsModule.register([
-      { name: PRODUCT_SERVICE,
+      {
+        name: PRODUCT_SERVICE,
         transport: Transport.TCP,
         options: {
           host: envs.productHost,
@@ -18,4 +19,4 @@ import { PRODUCT_SERVICE, envs } from 'src/config';
     ]),
   ]
 })
-export class ProductsModule {}
+export class ProductsModule { }

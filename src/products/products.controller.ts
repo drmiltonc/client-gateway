@@ -26,15 +26,10 @@ export class ProductsController {
 
     try {
       const product = await firstValueFrom(this.client.send({ cmd: 'find_one_product' }, { id }));
-
       return product;
-
-    } catch(error) {
+    } catch (error) {
       throw new BadRequestException(error);
-
     }
-
-
   }
 
   @Delete(':id')
